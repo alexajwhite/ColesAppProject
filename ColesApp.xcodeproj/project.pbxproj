@@ -14,6 +14,8 @@
 		2F393A2E28A89B0B00A76B24 /* ColesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A2D28A89B0B00A76B24 /* ColesAppTests.swift */; };
 		2F393A3828A89B0B00A76B24 /* ColesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A3728A89B0B00A76B24 /* ColesAppUITests.swift */; };
 		2F393A3A28A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A3928A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift */; };
+		2F393A4828A8A3BF00A76B24 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A4728A8A3BF00A76B24 /* RecipeModel.swift */; };
+		2F393A4B28A8A58900A76B24 /* recipesSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F393A4A28A8A58900A76B24 /* recipesSample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		2F393A3328A89B0B00A76B24 /* ColesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F393A3728A89B0B00A76B24 /* ColesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesAppUITests.swift; sourceTree = "<group>"; };
 		2F393A3928A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F393A4728A8A3BF00A76B24 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		2F393A4A28A8A58900A76B24 /* recipesSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipesSample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		2F393A1B28A89B0900A76B24 /* ColesApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F393A4928A8A57B00A76B24 /* Data */,
+				2F393A4628A8A34700A76B24 /* Models */,
 				2F393A1C28A89B0900A76B24 /* ColesAppApp.swift */,
 				2F393A1E28A89B0900A76B24 /* ContentView.swift */,
 				2F393A2028A89B0B00A76B24 /* Assets.xcassets */,
@@ -125,6 +131,22 @@
 				2F393A3928A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift */,
 			);
 			path = ColesAppUITests;
+			sourceTree = "<group>";
+		};
+		2F393A4628A8A34700A76B24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F393A4728A8A3BF00A76B24 /* RecipeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F393A4928A8A57B00A76B24 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F393A4A28A8A58900A76B24 /* recipesSample.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F393A4B28A8A58900A76B24 /* recipesSample.json in Resources */,
 				2F393A2428A89B0B00A76B24 /* Preview Assets.xcassets in Resources */,
 				2F393A2128A89B0B00A76B24 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +282,7 @@
 			files = (
 				2F393A1F28A89B0900A76B24 /* ContentView.swift in Sources */,
 				2F393A1D28A89B0900A76B24 /* ColesAppApp.swift in Sources */,
+				2F393A4828A8A3BF00A76B24 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
