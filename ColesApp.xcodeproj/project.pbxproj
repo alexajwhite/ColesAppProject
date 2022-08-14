@@ -98,6 +98,7 @@
 		2F393A1B28A89B0900A76B24 /* ColesApp */ = {
 			isa = PBXGroup;
 			children = (
+				2F393A4A28A8A58900A76B24 /* recipesSample.json */,
 				2F393A4928A8A57B00A76B24 /* Data */,
 				2F393A4628A8A34700A76B24 /* Models */,
 				2F393A1C28A89B0900A76B24 /* ColesAppApp.swift */,
@@ -144,7 +145,6 @@
 		2F393A4928A8A57B00A76B24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2F393A4A28A8A58900A76B24 /* recipesSample.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";

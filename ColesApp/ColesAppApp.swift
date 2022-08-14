@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+
+
 @main
 struct ColesAppApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            ContentView(recipes: loadJson(filename: "recipesSample") ?? [])
+            
         }
     }
 }
