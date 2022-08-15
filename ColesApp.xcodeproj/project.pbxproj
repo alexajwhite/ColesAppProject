@@ -16,6 +16,10 @@
 		2F393A3A28A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A3928A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift */; };
 		2F393A4828A8A3BF00A76B24 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A4728A8A3BF00A76B24 /* RecipeModel.swift */; };
 		2F393A4B28A8A58900A76B24 /* recipesSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F393A4A28A8A58900A76B24 /* recipesSample.json */; };
+		2F393A4D28A91A0300A76B24 /* RecipeGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A4C28A91A0300A76B24 /* RecipeGridItem.swift */; };
+		2F393A4F28A9C23600A76B24 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A4E28A9C23600A76B24 /* RecipeDetailView.swift */; };
+		2F393A5128A9D7B200A76B24 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F393A5028A9D7B200A76B24 /* JsonDecoder.swift */; };
+		2FDAD2FC28A9DDB600EA3248 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2FDAD2FB28A9DDB600EA3248 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,9 @@
 		2F393A3928A89B0B00A76B24 /* ColesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F393A4728A8A3BF00A76B24 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		2F393A4A28A8A58900A76B24 /* recipesSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipesSample.json; sourceTree = "<group>"; };
+		2F393A4C28A91A0300A76B24 /* RecipeGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGridItem.swift; sourceTree = "<group>"; };
+		2F393A4E28A9C23600A76B24 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		2F393A5028A9D7B200A76B24 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDAD2FC28A9DDB600EA3248 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +107,14 @@
 			isa = PBXGroup;
 			children = (
 				2F393A4A28A8A58900A76B24 /* recipesSample.json */,
-				2F393A4928A8A57B00A76B24 /* Data */,
 				2F393A4628A8A34700A76B24 /* Models */,
 				2F393A1C28A89B0900A76B24 /* ColesAppApp.swift */,
 				2F393A1E28A89B0900A76B24 /* ContentView.swift */,
 				2F393A2028A89B0B00A76B24 /* Assets.xcassets */,
 				2F393A2228A89B0B00A76B24 /* Preview Content */,
+				2F393A4C28A91A0300A76B24 /* RecipeGridItem.swift */,
+				2F393A4E28A9C23600A76B24 /* RecipeDetailView.swift */,
+				2F393A5028A9D7B200A76B24 /* JsonDecoder.swift */,
 			);
 			path = ColesApp;
 			sourceTree = "<group>";
@@ -142,13 +152,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2F393A4928A8A57B00A76B24 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +168,9 @@
 			dependencies = (
 			);
 			name = ColesApp;
+			packageProductDependencies = (
+				2FDAD2FB28A9DDB600EA3248 /* CachedAsyncImage */,
+			);
 			productName = ColesApp;
 			productReference = 2F393A1928A89B0900A76B24 /* ColesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 2F393A1028A89B0900A76B24;
+			packageReferences = (
+				2FDAD2FA28A9DDB600EA3248 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 2F393A1A28A89B0900A76B24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F393A4D28A91A0300A76B24 /* RecipeGridItem.swift in Sources */,
+				2F393A4F28A9C23600A76B24 /* RecipeDetailView.swift in Sources */,
+				2F393A5128A9D7B200A76B24 /* JsonDecoder.swift in Sources */,
 				2F393A1F28A89B0900A76B24 /* ContentView.swift in Sources */,
 				2F393A1D28A89B0900A76B24 /* ColesAppApp.swift in Sources */,
 				2F393A4828A8A3BF00A76B24 /* RecipeModel.swift in Sources */,
@@ -607,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FDAD2FA28A9DDB600EA3248 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FDAD2FB28A9DDB600EA3248 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FDAD2FA28A9DDB600EA3248 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F393A1128A89B0900A76B24 /* Project object */;
 }

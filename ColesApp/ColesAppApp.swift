@@ -14,7 +14,9 @@ struct ColesAppApp: App {
     var body: some Scene {
         
         WindowGroup {
-            ContentView(recipes: loadJson(filename: "recipesSample") ?? [])
+            NavigationView {
+                ContentView(recipes: loadJson(filename: "recipesSample") ?? [])
+            }
             
         }
     }

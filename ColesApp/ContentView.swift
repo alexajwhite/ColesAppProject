@@ -7,41 +7,35 @@
 
 import SwiftUI
 
+//ContentView shows the main view of recipes which is displayed in grid format
 struct ContentView: View {
     let recipes:[Recipe]
     
+    let columns = [
+        GridItem(.adaptive(minimum: 300), alignment: .leading)
+    ]
+    
     var body: some View {
-        List {
-            ForEach(recipes) { recipe in
-                AsyncImage(url: URL(string: "https://www.coles.com.au/" + recipe.dynamicThumbnail))
-                    .frame(width: 100, height: 100, alignment: .center)
-                Text("RECIPE")
-                    .font(.headline)
-                Text(recipe.dynamicTitle)
-                    .font(.subheadline)
-                    .bold()
+        ScrollView() {
+            LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+                ForEach(recipes) { recipe in
+                    NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
+                        RecipeGridItem(recipe: recipe)
+                    }
+                }
             }
+            .padding(20)
+            
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(recipes: loadJson(filename: "recipesSample") ?? [])
-    }
-}
-
-func loadJson(filename fileName: String) -> [Recipe]? {
-    if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            let jsonData = try decoder.decode(RecipeData.self, from: data)
-            print(jsonData.recipes)
-            return jsonData.recipes
-        } catch {
-            print("error:\(error)")
+        NavigationView {
+            ContentView(recipes: loadJson(filename: "recipesSample") ?? [])
+                .previewInterfaceOrientation(.landscapeRight)
         }
+        .previewInterfaceOrientation(.landscapeLeft)
     }
-    return nil
 }

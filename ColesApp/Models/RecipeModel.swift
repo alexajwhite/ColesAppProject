@@ -12,6 +12,8 @@ struct RecipeData: Codable {
     var recipes: [Recipe]
 }
 
+
+//RecipeModel represents a single recipe that was defined in the recipesSample.json file
 struct Recipe: Identifiable, Codable {
     let id: UUID = UUID()
     let dynamicTitle: String

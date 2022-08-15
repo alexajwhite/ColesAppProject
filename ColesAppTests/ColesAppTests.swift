@@ -32,5 +32,22 @@ class ColesAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testLoadJson() throws {
+        XCTAssertNoThrow(loadJson(filename: "recipesSample") ?? [])
+    }
+    
+    func testJsonDataIsOutput() throws {
+        let testOutput = loadJson(filename: "recipesSample") ?? []
+        XCTAssertTrue(testOutput.count > 0)
+    }
+    
+    func testJsonDataCorrectCount() throws {
+        let testOutput = loadJson(filename: "recipesSample") ?? []
+        XCTAssertEqual(testOutput.count, 8)
+    }
+    
+    
+
 
 }
